@@ -23,6 +23,7 @@ export class ProfileComponent implements OnInit {
     this.http.get(GRAPH_ENDPOINT)
     .subscribe({
       next: (profile) => {
+        console.log('xxxxxxx',profile);
         this.profile = profile;
       },
       error: (err: AuthError) => {
